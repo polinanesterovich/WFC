@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="server" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/lib_wfc" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="functions_GetActions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActions" />
+  </wsdl:message>
+  <wsdl:message name="functions_GetActions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="functions_GetServices_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServices" />
+  </wsdl:message>
+  <wsdl:message name="functions_GetServices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="functions_GetPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPerson" />
+  </wsdl:message>
+  <wsdl:message name="functions_GetPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="functions_GetOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrder" />
+  </wsdl:message>
+  <wsdl:message name="functions_GetOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="functions_AddOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrder" />
+  </wsdl:message>
+  <wsdl:message name="functions_AddOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="functions_GetAllOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOrders" />
+  </wsdl:message>
+  <wsdl:message name="functions_GetAllOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="functions_Registration_InputMessage">
+    <wsdl:part name="parameters" element="tns:Registration" />
+  </wsdl:message>
+  <wsdl:message name="functions_Registration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="functions_Autorization_InputMessage">
+    <wsdl:part name="parameters" element="tns:Autorization" />
+  </wsdl:message>
+  <wsdl:message name="functions_Autorization_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AutorizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="functions_OrderPrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:OrderPrice" />
+  </wsdl:message>
+  <wsdl:message name="functions_OrderPrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OrderPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="functions_SaveOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOrder" />
+  </wsdl:message>
+  <wsdl:message name="functions_SaveOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="functions_SavePerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePerson" />
+  </wsdl:message>
+  <wsdl:message name="functions_SavePerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePersonResponse" />
+  </wsdl:message>
+  <wsdl:portType name="functions">
+    <wsdl:operation name="GetActions">
+      <wsdl:input wsaw:Action="http://tempuri.org/functions/GetActions" message="tns:functions_GetActions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/functions/GetActionsResponse" message="tns:functions_GetActions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServices">
+      <wsdl:input wsaw:Action="http://tempuri.org/functions/GetServices" message="tns:functions_GetServices_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/functions/GetServicesResponse" message="tns:functions_GetServices_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/functions/GetPerson" message="tns:functions_GetPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/functions/GetPersonResponse" message="tns:functions_GetPerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/functions/GetOrder" message="tns:functions_GetOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/functions/GetOrderResponse" message="tns:functions_GetOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/functions/AddOrder" message="tns:functions_AddOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/functions/AddOrderResponse" message="tns:functions_AddOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/functions/GetAllOrders" message="tns:functions_GetAllOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/functions/GetAllOrdersResponse" message="tns:functions_GetAllOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Registration">
+      <wsdl:input wsaw:Action="http://tempuri.org/functions/Registration" message="tns:functions_Registration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/functions/RegistrationResponse" message="tns:functions_Registration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Autorization">
+      <wsdl:input wsaw:Action="http://tempuri.org/functions/Autorization" message="tns:functions_Autorization_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/functions/AutorizationResponse" message="tns:functions_Autorization_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OrderPrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/functions/OrderPrice" message="tns:functions_OrderPrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/functions/OrderPriceResponse" message="tns:functions_OrderPrice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/functions/SaveOrder" message="tns:functions_SaveOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/functions/SaveOrderResponse" message="tns:functions_SaveOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/functions/SavePerson" message="tns:functions_SavePerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/functions/SavePersonResponse" message="tns:functions_SavePerson_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_functions" type="tns:functions">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetActions">
+      <soap:operation soapAction="http://tempuri.org/functions/GetActions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServices">
+      <soap:operation soapAction="http://tempuri.org/functions/GetServices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPerson">
+      <soap:operation soapAction="http://tempuri.org/functions/GetPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrder">
+      <soap:operation soapAction="http://tempuri.org/functions/GetOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrder">
+      <soap:operation soapAction="http://tempuri.org/functions/AddOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrders">
+      <soap:operation soapAction="http://tempuri.org/functions/GetAllOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Registration">
+      <soap:operation soapAction="http://tempuri.org/functions/Registration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Autorization">
+      <soap:operation soapAction="http://tempuri.org/functions/Autorization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderPrice">
+      <soap:operation soapAction="http://tempuri.org/functions/OrderPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveOrder">
+      <soap:operation soapAction="http://tempuri.org/functions/SaveOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePerson">
+      <soap:operation soapAction="http://tempuri.org/functions/SavePerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="server">
+    <wsdl:port name="BasicHttpBinding_functions" binding="tns:BasicHttpBinding_functions">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/lib_wfc/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
